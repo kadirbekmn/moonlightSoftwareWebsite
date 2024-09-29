@@ -7,14 +7,12 @@ body {
 
 
 header {
-    background-color:  rgba(204, 34, 34, 0.96) !important;
+    background-color:  black !important;
     color: #fff;
     padding: 10px;
     display: flex;
 }
-nav {
 
-}
 nav ul {
     list-style: none;
     padding: 0;
@@ -88,7 +86,7 @@ nav ul li a {
 
 
 footer {
-    background-color:  rgba(204, 34, 34, 0.96) !important;
+    background-color:  black !important;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -118,7 +116,7 @@ h1 {
     font-weight: normal;
 }
 .hbc_rent {
-    color:  rgba(204, 34, 34, 0.96); !important;
+    color: black; !important;
     font-size: 3rem !important;
     font-weight: 900;
 }
@@ -167,13 +165,14 @@ input[type="submit"]:hover {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #042326;
 }
 
 .header {
     background-color: #333;
     color: #fff;
     padding: 10px;
+
 }
 
 .header ul {
@@ -195,15 +194,6 @@ body {
 .hero {
     position: relative;
     overflow: hidden;
-}
-
-#background-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
 }
 
 .car-list {
@@ -345,16 +335,10 @@ footer {
     overflow: hidden;
 }
 
-#background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
+.hero2 {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .text-container {
@@ -399,7 +383,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     z-index: 2;
     opacity: 1;
@@ -493,3 +477,51 @@ th {
     width: 60%;
     margin-top: 280px
 }
+
+/* Kaydırma Göstergesi Konumu */
+.scroll-indicator {
+    position: absolute;
+    bottom: 70px; /* Hero bölümünün altında görünecek */
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+}
+
+/* Mouse Görünümü */
+.mouse {
+    width: 35px;
+    height: 64px;
+    border: 2px solid #ffffff; /* Beyaz renkli çerçeve */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5px;
+}
+
+/* Hareketli Nokta */
+.wheel {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff; /* Beyaz renkli nokta */
+    border-radius: 50%;
+    animation: wheel-move 2s infinite;
+}
+
+/* Animasyon */
+@keyframes wheel-move {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(45px);
+        opacity: 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
